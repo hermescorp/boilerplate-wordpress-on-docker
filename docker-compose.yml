@@ -16,7 +16,8 @@ services:
       - db
     build: ./acme
     volumes:
-      - "./www:/var/www/html"
+      - ./www:/var/www/html
+      - ./themes/${THEME_SLUG}:/var/www/html/wp-content/themes/${THEME_SLUG}
     links:
       - db
     ports:

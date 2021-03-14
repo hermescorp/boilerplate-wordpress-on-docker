@@ -1,7 +1,7 @@
 FROM wordpress:latest
  
 RUN apt-get update
-RUN apt-get -y install wget unzip
+RUN apt-get -y install wget unzip zlib1g-dev libzip-dev
 RUN docker-php-ext-install zip
  
 WORKDIR /tmp/wp-plugins
